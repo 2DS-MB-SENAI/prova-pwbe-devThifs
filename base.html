@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base</title>
+</head>
+<body>
+    <form action="medicos/" method="post">
+        {% csrf_token %}
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome" required>
+
+        <label for="especialidade">especialidade: </label>
+        <select name="especialidade" id="especialidade" required>
+            <option value="1">Médico</option>
+            <option value="2">Psicólogo</option>
+            <option value="3">Oftalmologista</option>
+        </select>
+
+        <label for="crm">CRM: </label>
+        <input type="text" name="crm" id="crm" required>
+        
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email" required>
+
+        <button type="submit">registrar</button>
+    </form>
+</body>
+</html>
